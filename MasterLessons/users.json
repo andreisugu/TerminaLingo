@@ -1,0 +1,39 @@
+[
+  {
+    "lessonsCompleted": [
+      {
+        "lessonPath": "MasterLessons/Dutch/Basic/1.txt",
+        "score": 91
+      },
+      {
+        "lessonPath": "MasterLessons/Dutch/Advanced/Lesson file example.json",
+        "score": 92
+      },
+      {
+        "lessonPath": "MasterLessons/Dutch/Advanced/Ez.json",
+        "score": 100
+      }
+    ],
+    "learnedWords": [
+      "hello",
+      "goodbye",
+      "please",
+      "thank you",
+      "pleb"
+    ],
+    "userName": "a",
+    "password": "$2a$10$DUQk4dC8XE4ef.5cY/1ECOIlCqWoFUhP//Wzisy2oR/8cn48bmJ2S",
+    "dailyLoginStreak": 1,
+    "lastLoginDate": "10072025",
+    "lessonsTotal": 2
+  },
+  {
+    "lessonsCompleted": [],
+    "learnedWords": [],
+    "userName": "llll",
+    "password": "$2a$10$w9pD8/s68djiwOsWIJHyHeEEYuFefyIAE2zDoBho5GKa9bI1ywWxK",
+    "dailyLoginStreak": 1,
+    "lastLoginDate": "10072025",
+    "lessonsTotal": 0
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "numeLectie": "Introducere in Saluturi",
+  "dificultate": "Usor",
+  "cuvinteInvatate": ["hello", "goodbye", "please", "thank you"],
+  "teste": [
+    {
+      "tip": 1,
+      "propozitie": "Salut, cum te simti azi?",
+      "raspunsCorect": "Hello, how do you feel today?"
+    },
+    {
+      "tip": 2,
+      "propozitie": "Mancarea este delicioasa.",
+      "raspunsCorect": "The food is delicious."
+    },
+    {
+      "tip": 1,
+      "propozitie": "Please pass the salt.",
+      "raspunsCorect": "Te rog da-mi sarea."
+    },
+    {
+      "tip": 2,
+      "propozitie": "The dog is barking.",
+      "raspunsCorect": "Cainele latra."
+    },
+    {
+      "tip": 3,
+      "leftWords": ["apple", "house", "car"],
+      "rightWords": ["mar", "casa", "masina"]
+    },
+    {
+      "tip": 4,
+      "propozitie": "Definiția cuvântului 'a învăța' este procesul de dobândire de noi cunoștințe sau abilități."
+    },
+    {
+      "tip": 4,
+      "propozitie": "Un exemplu de folosire a cuvântului 'mulțumesc': 'Mulțumesc pentru ajutor!'"
+    }
+  ]
+}

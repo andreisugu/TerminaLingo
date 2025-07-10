@@ -1,0 +1,11 @@
+{
+  "numeLectie": "Usurinta intruchipata",
+  "dificultate": "Usor rau de tot",
+  "cuvinteInvatate": ["pleb"],
+  "teste": [
+    {
+      "tip": 4,
+      "propozitie": "bravo"
+    }
+  ]
+}

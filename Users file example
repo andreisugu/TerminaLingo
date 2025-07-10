@@ -1,0 +1,31 @@
+[
+  {
+    "username": "user_one",
+    "password_hash": "a_secure_hash_of_password_one",
+    "daily_login_streak": 5,
+    "last_login_date": "2025-07-04",
+    "lessons_completed": [
+      {
+        "lesson_path": "/lessons/grammar/lesson1.json",
+        "score": 95
+      },
+      {
+        "lesson_path": "/lessons/vocabulary/lesson_animals.json",
+        "score": 88
+      }
+    ],
+    "learned_words": [
+      "serendipity",
+      "ubiquitous",
+      "ephemeral"
+    ]
+  },
+  {
+    "username": "user_two",
+    "password_hash": "another_secure_hash_for_password_two",
+    "daily_login_streak": 1,
+    "last_login_date": "2025-07-04",
+    "lessons_completed": [],
+    "learned_words": []
+  }
+]

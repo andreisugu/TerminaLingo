@@ -1,0 +1,59 @@
+{
+  "numeLectie": "Lecția 1: Fraze Comune",
+  "dificultate": "Ușor",
+  "cuvinteInvatate": ["bună dimineața", "bună seara", "noapte bună", "cum ești?", "sunt bine", "mulțumesc", "cu plăcere", "scuze", "da", "nu"],
+  "teste": [
+    {
+      "tip": 1,
+      "propozitie": "Bună dimineața, cum te simți?",
+      "raspunsCorect": "Good morning, how do you feel?"
+    },
+    {
+      "tip": 1,
+      "propozitie": "Mulțumesc mult pentru ajutor.",
+      "raspunsCorect": "Thank you very much for your help."
+    },
+    {
+      "tip": 1,
+      "propozitie": "Noapte bună și vise plăcute.",
+      "raspunsCorect": "Good night and sweet dreams."
+    },
+    {
+      "tip": 2,
+      "propozitie": "How are you today?",
+      "raspunsCorect": "Cum ești azi?"
+    },
+    {
+      "tip": 2,
+      "propozitie": "You are welcome.",
+      "raspunsCorect": "Cu plăcere."
+    },
+    {
+      "tip": 2,
+      "propozitie": "Excuse me, where is the exit?",
+      "raspunsCorect": "Scuze, unde este ieșirea?"
+    },
+    {
+      "tip": 3,
+      "leftWords": ["masă", "scaun", "carte", "apă", "pâine"],
+      "rightWords": ["table", "chair", "book", "water", "bread"]
+    },
+    {
+      "tip": 3,
+      "leftWords": ["casă", "mașină", "copac", "floare", "soare"],
+      "rightWords": ["house", "car", "tree", "flower", "sun"]
+    },
+    {
+      "tip": 4,
+      "propozitie": "Un exemplu de folosire a cuvântului 'hello': 'Hello, how are you?' (Bună, cum ești?)"
+    },
+    {
+      "tip": 4,
+      "propozitie": "Un exemplu de folosire a cuvântului 'yes': 'Yes, I want to go to the cinema.' (Da, vreau să merg la film.)"
+    },
+    {
+      "tip": 4,
+      "propozitie": "Un exemplu de folosire a cuvântului 'no': 'No, I cannot come today.' (Nu, nu pot veni azi.)"
+    }
+  ]
+}
