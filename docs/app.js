@@ -22,6 +22,15 @@ const STORAGE_KEYS = {
 let terminalOutput;
 let terminalInput;
 
+// Simple password hashing function for client-side storage
+async function hashPassword(password) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(password);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
     terminalOutput = document.getElementById('terminal-output');
@@ -133,17 +142,20 @@ function registerAccount() {
         }
         
         printLine('Password:');
-        getUserInput((password) => {
+        getUserInput(async (password) => {
             if (!password) {
                 printLine('Password cannot be empty.', 'error');
                 showAuthMenu();
                 return;
             }
             
+            // Hash password for storage
+            const hashedPassword = await hashPassword(password);
+            
             // Create new user
             users[username] = {
                 username: username,
-                password: password, // In production, this should be hashed
+                password: hashedPassword,
                 lessonsCompleted: [],
                 learnedWords: [],
                 dailyLoginStreak: 0,
@@ -178,8 +190,11 @@ function loginAccount() {
         }
         
         printLine('Password:');
-        getUserInput((password) => {
-            if (users[username].password !== password) {
+        getUserInput(async (password) => {
+            // Hash the entered password to compare with stored hash
+            const hashedPassword = await hashPassword(password);
+            
+            if (users[username].password !== hashedPassword) {
                 printLine('Incorrect password.', 'error');
                 showAuthMenu();
                 return;
