@@ -49,7 +49,7 @@ public class LessonParser {
         System.out.println(blackout);
 
         while (!tests.isEmpty()) {
-            Test currTest = tests.removeFirst();
+            Test currTest = tests.remove(0);
             if (queryTest(currTest)) {
                 // Test succeded, add 1 to streak
                 correctStreak++;

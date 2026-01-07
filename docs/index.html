@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerminaLingo - Interactive Language Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-title">TerminaLingo - Interactive Language Learning CLI</div>
+                <div class="terminal-buttons">
+                    <span class="btn-close"></span>
+                    <span class="btn-minimize"></span>
+                    <span class="btn-maximize"></span>
+                </div>
+            </div>
+            <div class="terminal-body" id="terminal-output">
+                <div class="output-line">Welcome to TerminaLingo!</div>
+                <div class="output-line">Loading...</div>
+            </div>
+            <div class="terminal-input-wrapper">
+                <span class="terminal-prompt">$ </span>
+                <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" autofocus>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
