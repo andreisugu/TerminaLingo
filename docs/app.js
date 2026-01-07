@@ -44,7 +44,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load lessons data
     loadLessons();
     
-    // Start the application
+    // Check for existing session and auto-login
+    const storedUsername = localStorage.getItem(STORAGE_KEYS.CURRENT_USER);
+    if (storedUsername) {
+        const users = getUsers();
+        if (users[storedUsername]) {
+            // Auto-login the user
+            users[storedUsername] = updateLoginStreak(users[storedUsername]);
+            saveUsers(users);
+            
+            app.loggedUser = users[storedUsername];
+            
+            printLine('Welcome to TerminaLingo!', 'info');
+            printLine('=====================================');
+            printBlankLine();
+            printLine(`Automatically logged in as: ${storedUsername}`, 'success');
+            printLine(`Login streak: ${app.loggedUser.dailyLoginStreak} days`, 'info');
+            printLine(`Lessons completed: ${app.loggedUser.lessonsTotal}`, 'info');
+            printLine(`Words learned: ${app.loggedUser.learnedWords.length}`, 'info');
+            printBlankLine();
+            
+            showLanguageMenu();
+            return;
+        } else {
+            // User no longer exists, clear the stored session
+            localStorage.removeItem(STORAGE_KEYS.CURRENT_USER);
+        }
+    }
+    
+    // Start the application with auth menu
     showAuthMenu();
 });
 
