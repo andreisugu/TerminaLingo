@@ -1,8 +1,16 @@
 # TerminaLingo: Interactive Language Learning CLI
 
+## 🌐 Try it Online!
+
+**[Launch TerminaLingo Web App](https://andreisugu.github.io/TerminaLingo/)** - No installation required! Try the web-based version directly in your browser.
+
 ## 📚 About TerminaLingo
 
-TerminaLingo is a console-based Java application designed to facilitate foreign language learning through interactive lessons. It provides a structured environment for users to practice vocabulary and translation skills, track their progress, and manage their learning journey directly from the command line.
+TerminaLingo is an interactive language learning application available in two versions:
+- **Web Version**: A terminal-style web application that runs directly in your browser (deployed on GitHub Pages)
+- **CLI Version**: A console-based Java application for local use
+
+Both versions provide a structured environment for users to practice vocabulary and translation skills, track their progress, and manage their learning journey.
 
 ## ✨ Key Features
 
@@ -30,15 +38,28 @@ TerminaLingo is a console-based Java application designed to facilitate foreign 
 
 ## 🚀 Getting Started
 
-To get TerminaLingo up and running on your local machine, follow these steps:
+### Option 1: Web Version (Recommended)
 
-### Prerequisites
+**No installation required!** Simply visit [https://andreisugu.github.io/TerminaLingo/](https://andreisugu.github.io/TerminaLingo/) in your web browser.
+
+The web version features:
+- Terminal-style interface that mimics the CLI experience
+- Runs entirely in your browser
+- Progress saved in browser local storage
+- Works on desktop and mobile devices
+- Includes sample lessons to get you started
+
+### Option 2: Java CLI Version
+
+To run TerminaLingo locally as a Java CLI application, follow these steps:
+
+#### Prerequisites
 
 * **Java Development Kit (JDK) 17 or newer**: Ensure JDK 17+ is installed and configured in your system's PATH. You can download it from [Oracle](https://www.oracle.com/java/technologies/downloads/) or [Adoptium (OpenJDK)](https://adoptium.net/).
 
 * **Git** (optional, for cloning): If you prefer to clone the repository.
 
-### Installation & Setup
+#### Installation & Setup
 
 1. **Clone the repository (or download the source code):**
 
@@ -77,27 +98,9 @@ To get TerminaLingo up and running on your local machine, follow these steps:
    ```
 
 3. **Dependencies:**
-   TerminaLingo uses Google Gson for JSON processing and jBCrypt for password hashing.
+   TerminaLingo uses Google Gson for JSON processing and jBCrypt for password hashing. These are already configured in `pom.xml`.
 
-   * **Maven:** `pom.xml`:
-
-     ```
-     <dependencies>
-         <dependency>
-             <groupId>com.google.code.gson</groupId>
-             <artifactId>gson</artifactId>
-             <version>2.10.1</version> <!-- Use the latest stable version -->
-         </dependency>
-         <dependency>
-             <groupId>org.mindrot</groupId>
-             <artifactId>jbcrypt</artifactId>
-             <version>0.4</version> <!-- Use the latest stable version -->
-         </dependency>
-     </dependencies>
-     
-     ```
-
-### Running the Application
+#### Running the Java CLI Application
 
 1. **Compile:**
    Open your terminal in the project's root directory (`TerminaLingo/`) and compile the Java files.
@@ -235,7 +238,37 @@ Lesson files are located in `MasterLessons/{Language}/{Chapter}/{LessonName}.jso
 
 ```
 
+## 🌐 Web Version Details
+
+### Architecture
+
+The web version is a complete reimplementation of the CLI application using HTML, CSS, and JavaScript:
+
+- **HTML/CSS**: Terminal-style interface with a dark theme and green text
+- **JavaScript**: All application logic including user authentication, lesson parsing, and progress tracking
+- **Local Storage**: User data and progress are stored in the browser's localStorage
+- **GitHub Pages**: Automatically deployed using GitHub Actions
+
+### Key Differences from Java Version
+
+- **No Server Required**: Runs entirely in the browser
+- **Client-side Storage**: Data persists in browser localStorage instead of JSON files
+- **Sample Lessons**: Includes embedded sample lessons (does not load from MasterLessons folder)
+- **Cross-platform**: Works on any device with a modern web browser
+
+### Deployment
+
+The web version is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the main branch. The workflow file is located at `.github/workflows/deploy-pages.yml`.
+
+To deploy your own version:
+1. Fork this repository
+2. Enable GitHub Pages in repository settings (Settings → Pages → Source: GitHub Actions)
+3. Push changes to the main branch
+4. Your site will be available at `https://yourusername.github.io/TerminaLingo/`
+
 ## 🔮 Future Enhancements
+
+* ~~**Web Version**: Create a browser-based version deployed on GitHub Pages~~ ✅ **Completed**
 
 * **Graphical User Interface (GUI)**: Transition from CLI to a more intuitive GUI (e.g., JavaFX, Swing).
 
